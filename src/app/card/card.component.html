@@ -1,0 +1,23 @@
+<div class="merchandise-cards__card">
+    <img
+      [src]="card.images[0]"
+      class="merchandise-cards__image"
+      alt="Alt"
+    />
+    <div class="merchandise-cards__rating-and-price">
+      <div class="merchandise-cards__rating"> {{ card.rating }} </div>
+      <div class="merchandise-cards__price">₴{{ card.price }}</div>
+    </div>
+    <ul class="merchandise-cards__item-descriptions">
+      <li class="merchandise-cards__item-name">
+        {{ card.title }}
+      </li>
+      <li class="merchandise-cards__item-description">
+        Redesigned from scratch and completely revised.
+      </li>
+    </ul>
+    <div class="merchandise-cards__buttons">
+      <button class="merchandise-cards__wishlist-button">WISHLIST</button>
+      <button class="merchandise-cards__add-to-cart-button">ADD TO CART</button>
+    </div>
+  </div>

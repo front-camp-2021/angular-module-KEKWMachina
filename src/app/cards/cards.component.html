@@ -1,0 +1,9 @@
+<app-searchfield></app-searchfield>
+<div class="merchandise-cards">
+    <div *ngIf="cards.length === 0" class="merchandise-cards__filters-error-message">
+            Nothing was found. Please, reset your filters or check your input
+    </div>
+    <div *ngFor="let card of cards">
+        <app-card [card]="card"></app-card>
+    </div>
+</div>
