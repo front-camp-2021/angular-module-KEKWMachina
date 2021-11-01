@@ -17,7 +17,8 @@
       </li>
     </ul>
     <div class="merchandise-cards__buttons">
-      <button class="merchandise-cards__wishlist-button">WISHLIST</button>
+      <button *ngIf="!inInWishlist"class="merchandise-cards__wishlist-button" (click)="addToWishlist(card)">WISHLIST</button>
+      <button *ngIf="inInWishlist"class="merchandise-cards__wishlist-button" (click)="addToWishlist(card)">ADDED</button>
       <button class="merchandise-cards__add-to-cart-button">ADD TO CART</button>
     </div>
   </div>

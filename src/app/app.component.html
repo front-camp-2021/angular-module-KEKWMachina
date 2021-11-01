@@ -1,12 +1,4 @@
-<router-outlet></router-outlet>
-
 <app-header></app-header>
 <app-breadcrumbs></app-breadcrumbs>
-<app-main-content-nav [itemQuantity]="cardData.length"></app-main-content-nav>
 
-<div class="main-content">
-  <app-filters class="filters" [categories]="categoriesData" [brands]="brandsData"></app-filters>
-  <app-cards class="cards" [cards]="cardData.slice(pages[0], pages[1])"></app-cards>
-</div>
-
-<app-pagination [cards]="cardData" [activePage]="pages[2]"></app-pagination>
+<router-outlet></router-outlet>

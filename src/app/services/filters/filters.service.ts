@@ -8,6 +8,7 @@ export class FiltersService {
   brands: string[] = [];
   priceSelected: boolean = false;
   filteredByPrice = [];
+  filteredByCategories: any = [];
 
   constructor() {}
 
@@ -65,11 +66,14 @@ export class FiltersService {
       return result;
     }
 
-    return filter(
+    const result = filter(
       filter(activeData, this.categories, 'category'),
       this.brands,
       'brand'
     );
+
+    this.filteredByCategories = result;
+    return result;
   }
 
   setSliderValues(cardData: any): [number, number, boolean] {
@@ -90,6 +94,10 @@ export class FiltersService {
       this.priceSelected = true;
     }
     return [this.priceSelected, this.filteredByPrice];
+  }
+
+  getFilteredByCatefories() {
+    return this.filteredByCategories;
   }
 
   resetFilters():void {

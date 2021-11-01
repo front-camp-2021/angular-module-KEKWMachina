@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
@@ -16,6 +15,8 @@ import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,14 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     SearchfieldComponent,
     CardComponent,
     CheckboxComponent,
+    WishlistComponent,
+    MainContentComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-
     NgxSliderModule,
   ],
   providers: [CardService],
