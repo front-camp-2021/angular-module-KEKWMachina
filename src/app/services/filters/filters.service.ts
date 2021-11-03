@@ -14,6 +14,7 @@ export class FiltersService {
 
   setFilters(checkbox: any, section: string): void {
     const formattedName = checkbox.id.toLowerCase().split(' ').join('_');
+
     if (section === 'categories') {
       if (checkbox.checked) {
         this.categories.push(formattedName);
@@ -57,7 +58,7 @@ export class FiltersService {
 
       for (const filter of filters) {
         for (const product of productsArr) {
-          if (product[propertyName].includes(filter)) {
+          if (product[propertyName].split('-').join('').includes(filter)) {
             result.push(product);
           }
         }
@@ -100,7 +101,7 @@ export class FiltersService {
     return this.filteredByCategories;
   }
 
-  resetFilters():void {
+  resetFilters(): void {
     this.categories = [];
     this.brands = [];
   }

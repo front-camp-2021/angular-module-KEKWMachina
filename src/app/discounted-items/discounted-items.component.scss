@@ -1,0 +1,33 @@
+$button-primary-color: #6F64F8;
+
+.discounted-cards-wrapper {
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        border-radius: 4px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0rem 8px;
+        
+        .wishlist-cards-wrapper__message {
+            font-size: 24px;
+        }
+    }
+}
+
+.unavailbility-message {
+    text-align: center;
+
+    &__btn-back {
+        height: 40px;
+        width: 220px;
+        border: none;
+        border-radius: 4px;
+        background-color: $button-primary-color;
+    }
+}

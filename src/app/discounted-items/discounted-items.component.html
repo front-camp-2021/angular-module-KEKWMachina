@@ -1,0 +1,15 @@
+<div *ngIf="pageAvailable" class="discounted-cards-wrapper">
+  <div class="discounted-cards-wrapper__container">
+    <div *ngFor="let card of cards">
+      <app-card [card]="card"></app-card>
+    </div>
+  </div>
+</div>
+
+<div class="unavailbility-message" *ngIf="!pageAvailable">
+  <h2>
+    Discounts are available from 8AM till 10PM. Your local time is
+    {{ timeDisplayed }}. Please, come back later
+  </h2>
+  <button class="unavailbility-message__btn-back" routerLink="/products">Back to store</button>
+</div>

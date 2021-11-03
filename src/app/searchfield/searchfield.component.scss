@@ -17,7 +17,7 @@ $font-weight-large: 600;
     width: 100%;
     filter: drop-shadow( -0.4px 0.5px 0.05rem $shadow-color);
 
-    .searchfield__input {
+    &__input {
         box-sizing: border-box;
         margin: 5px 0px 20px 0px;
         padding: 5px 5px 5px 15px;

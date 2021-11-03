@@ -17,6 +17,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { DiscountedItemsComponent } from './discounted-items/discounted-items.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { MainContentComponent } from './main-content/main-content.component';
     CheckboxComponent,
     WishlistComponent,
     MainContentComponent,
+    PageNotFoundComponent,
+    ProductPageComponent,
+    DiscountedItemsComponent,
   ],
   imports: [
     BrowserModule,

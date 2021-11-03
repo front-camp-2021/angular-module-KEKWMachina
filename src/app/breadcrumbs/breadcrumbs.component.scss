@@ -29,7 +29,7 @@ body {
     align-content: center;
     margin: 10px;
 
-    .breadcrumbs__home-button {
+    &__home-button {
         background-image: url(/assets/img/home.svg);
         width: 20px;
         height: 20px;
@@ -38,7 +38,7 @@ body {
         cursor: pointer;
     }
 
-    .breadcrumbs__arrows {
+    &__arrows {
         margin: 5px;
         background-image: url(/assets/img/breadcrumbs-arrows-right.svg);
         width: 20px;
@@ -47,13 +47,13 @@ body {
         background-repeat: no-repeat;   
     }
 
-    .breadcrumbs__active-page {
+    &__active-page {
         color: $secondary-text-color;
         font-weight: $font-weight-medium;
         cursor: pointer;
     }
 
-    .breadcrumbs__page {
+    &__page {
         color: $main-text-color;
         font-weight: $font-weight-medium;
         cursor: pointer;

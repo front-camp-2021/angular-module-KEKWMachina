@@ -2,7 +2,7 @@ import { Component, OnInit, Input, DoCheck } from '@angular/core';
 import { Options, LabelType } from '@angular-slider/ngx-slider';
 import { CardService } from '../services/card/card.service';
 import { FiltersService } from '../services/filters/filters.service';
-
+import { PagesService } from '../services/page/pages.service';
 
 @Component({
   selector: 'app-filters',
@@ -18,6 +18,7 @@ export class FiltersComponent implements OnInit, DoCheck {
   cardData = [];
 
   constructor(
+    private pagesService: PagesService,
     private cardService: CardService,
     private filtersService: FiltersService
   ) {}
@@ -28,6 +29,7 @@ export class FiltersComponent implements OnInit, DoCheck {
     floor: 0,
     ceil: 0,
     translate: (value: number, label: LabelType): string => {
+      this.pagesService.setPage('1');
       this.filtersService.filterByPrice(
         this.cardData,
         Number(document.querySelector('.ngx-slider-model-value')?.textContent),

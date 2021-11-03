@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from '../services/card/card.service';
+import { PagesService } from '../services/page/pages.service';
 
 @Component({
   selector: 'app-searchfield',
@@ -10,6 +11,7 @@ export class SearchfieldComponent implements OnInit {
   filter = 'Search';
 
   constructor(
+    private pagesService: PagesService,
     private cardService: CardService
   ) { }
 
@@ -17,7 +19,8 @@ export class SearchfieldComponent implements OnInit {
   }
 
   setUserInput(input: any) {
-    this.cardService.setSearch(input)
+    this.cardService.setSearch(input);
+    this.pagesService.setPage('1');
   }
 
 }

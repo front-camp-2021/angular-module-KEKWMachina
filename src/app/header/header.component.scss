@@ -27,7 +27,7 @@ body {
     display: flex;
     align-items: center;
     
-    .header__logo {
+    &__logo {
         align-self: center;
         background-image: url(/assets/img/logo.svg);
         margin: 10px;
@@ -37,7 +37,7 @@ body {
         background-repeat: no-repeat;
     }
 
-    .header__text {
+    &__text {
         font-size: 48px;
         line-height: 27px;
         color: $secondary-text-color;

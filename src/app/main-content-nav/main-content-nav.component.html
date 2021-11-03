@@ -5,8 +5,11 @@
       <button class="filters-header__filters-hide-button"></button>
     </div>
   </div>
-  <div class="search-resluts">
-    <div class="search-resluts__number">{{ itemQuantity }} Results Found</div>
-    <button class="search-resluts__wishlist-button" routerLink="/wishlist"></button>
+  <div class="search-results">
+    <div class="search-results__number">{{ itemQuantity }} Results Found</div>
+    <div class="search-results__btn-container">
+      <button class="search-results__discount" routerLink="/discounted"></button>  
+      <button class="search-results__wishlist-button" routerLink="/wishlist"></button>
+    </div>
   </div>
 </div>

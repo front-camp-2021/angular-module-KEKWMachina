@@ -17,7 +17,7 @@ $font-weight-large: 600;
     justify-content: center;
     margin-bottom: 30px;
 
-    .pagination__button-page-back {
+    &__button-page-back {
         width: 37px;
         border: none;
         border-radius: 50%;
@@ -29,7 +29,7 @@ $font-weight-large: 600;
         cursor: pointer;
     }
 
-    .pagination__button-page-forward {
+    &__button-page-forward {
         width: 37px;
         border: none;
         border-radius: 50%;
@@ -41,7 +41,7 @@ $font-weight-large: 600;
         cursor: pointer;
     }
 
-    .pagination__main {
+    &__main {
         background-color: $button-secondary-color;
         border-radius: 25px;
         display: flex;
