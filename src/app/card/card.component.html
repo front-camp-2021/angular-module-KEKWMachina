@@ -1,27 +1,40 @@
 <div class="merchandise-cards__card">
-    <img
-      [src]="card.images[0]"
-      class="merchandise-cards__image"
-      [alt]="card.title.slice(0, 50)"
-    />
-    <div class="merchandise-cards__rating-and-price">
-      <div class="merchandise-cards__rating"> {{ card.rating }} </div>
-      <div class="merchandise-cards__price">₴{{ card.price }}</div>
-    </div>
-    <ul class="merchandise-cards__item-descriptions">
-      <li 
+  <img
+    [src]="card.images[0]"
+    class="merchandise-cards__image"
+    [alt]="card.title.slice(0, 50)"
+  />
+  <div class="merchandise-cards__rating-and-price">
+    <div class="merchandise-cards__rating">{{ card.rating }}</div>
+    <div class="merchandise-cards__price">₴{{ card.price }}</div>
+  </div>
+  <ul class="merchandise-cards__item-descriptions">
+    <li
       (click)="setActiveItem()"
       [routerLink]="['/products', card.id]"
-      class="merchandise-cards__item-name">
-        {{ card.title.slice(0, 80) + '...'}}
-      </li>
-      <li class="merchandise-cards__item-description">
-        Redesigned from scratch and completely revised.
-      </li>
-    </ul>
-    <div class="merchandise-cards__buttons">
-      <button *ngIf="!inInWishlist" class="merchandise-cards__wishlist-button" (click)="addToWishlist(card)">WISHLIST</button>
-      <button *ngIf="inInWishlist" class="merchandise-cards__wishlist-button" (click)="addToWishlist(card)">ADDED</button>
-      <button class="merchandise-cards__add-to-cart-button">ADD TO CART</button>
-    </div>
+      class="merchandise-cards__item-name"
+    >
+      {{ card.title.slice(0, 50) + "..." }}
+    </li>
+    <li class="merchandise-cards__item-description">
+      Redesigned from scratch and completely revised.
+    </li>
+  </ul>
+  <div class="merchandise-cards__buttons">
+    <button
+      *ngIf="!inInWishlist"
+      class="merchandise-cards__wishlist-button"
+      (click)="addToWishlist(card)"
+    >
+      WISHLIST
+    </button>
+    <button
+      *ngIf="inInWishlist"
+      class="merchandise-cards__wishlist-button"
+      (click)="addToWishlist(card)"
+    >
+      ADDED
+    </button>
+    <button class="merchandise-cards__add-to-cart-button">ADD TO CART</button>
   </div>
+</div>
