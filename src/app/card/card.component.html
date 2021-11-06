@@ -12,6 +12,7 @@
     <li
       (click)="setActiveItem()"
       [routerLink]="['/products', card.id]"
+<<<<<<< HEAD
       class="merchandise-cards__item-name"
     >
       {{ card.title.slice(0, 50) + "..." }}
@@ -36,5 +37,19 @@
       ADDED
     </button>
     <button class="merchandise-cards__add-to-cart-button">ADD TO CART</button>
+=======
+      class="merchandise-cards__item-name">
+        {{ card.title.slice(0, 50) + '...'}}
+      </li>
+      <li class="merchandise-cards__item-description">
+        Redesigned from scratch and completely revised.
+      </li>
+    </ul>
+    <div class="merchandise-cards__buttons">
+      <button *ngIf="!inInWishlist" class="merchandise-cards__wishlist-button" (click)="addToWishlist(card)">WISHLIST</button>
+      <button *ngIf="inInWishlist" class="merchandise-cards__wishlist-button" (click)="addToWishlist(card)">ADDED</button>
+      <button class="merchandise-cards__add-to-cart-button">ADD TO CART</button>
+    </div>
+>>>>>>> 29611861095482327843e617e6771baa55c7aeae
   </div>
 </div>
